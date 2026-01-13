@@ -4,10 +4,36 @@ export const GlobalStyle = createGlobalStyle`
   * {
   margin: 0;
   padding: 0;
-  color: rgba(30, 30, 30, 1);
-  font-style: normal;
+  box-sizing: border-box;
 }
 
 body {
-  background-color:rgba(249, 250, 252, 1);
-}`
+  background-color: ${({ theme }) => theme.colors.bgColor};
+  font-family: 'Roboto', sans-serif;
+  color: ${({ theme }) => theme.colors.text};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+`

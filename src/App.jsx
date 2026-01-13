@@ -13,7 +13,7 @@ export const App = () => {
 
       <ToDoCounter />
 
-      {/* <CounterComponent /> */}
+      <CounterComponent />
 
       <ToDoTasks />
 

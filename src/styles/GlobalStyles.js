@@ -4,16 +4,10 @@ export const GlobalStyle = createGlobalStyle`
   * {
   margin: 0;
   padding: 0;
-  color: red;
+  color: rgba(30, 30, 30, 1);
   font-style: normal;
 }
 
-html {
-  font-size: 300px;
-  background-color: green;
-}
-
 body {
-  background-color: rgba(175, 26, 26, 1);
-}
-`
+  background-color:rgba(249, 250, 252, 1);
+}`

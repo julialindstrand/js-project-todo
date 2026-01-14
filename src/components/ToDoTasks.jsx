@@ -1,11 +1,11 @@
-import useTaskStore from '../stores/AddNewTaskStore'
+// import useTaskStore from '../stores/AddNewTaskStore'
 
 export const ToDoTasks = () => {
-  const { } = useTaskStore()
+  // const { } = useTaskStore()
 
   return (
     <>
-      <div>ToDoTasks</div>
+      <h2>ToDoTasks</h2>
     </>
   )
 }

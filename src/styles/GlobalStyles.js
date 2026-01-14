@@ -19,17 +19,17 @@ body {
 
   h1 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 300; /* Changed this for the design */
   }
 
   h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 300;
   }
 
   h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 300;
   }
 
   p {

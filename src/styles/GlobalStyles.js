@@ -5,6 +5,11 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* min-width: 40%; */
+}
+
+ #root {
+  width: 40%;
 }
 
 body {
@@ -14,12 +19,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   }
 
   h1 {
     font-size: 32px;
-    font-weight: 300; /* Changed this for the design */
+    font-weight: 300;
   }
 
   h2 {

@@ -7,7 +7,8 @@ export const theme = {
         border: "#E3E3E3",
         green: "#BDFF80",
         yellow: "#FEEF69",
-        red: "#FFA0A0"
+        red: "#FFA0A0",
+        iconBlue: "#3B75FF"
     },
 
     breakpoints: {

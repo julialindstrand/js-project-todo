@@ -1,4 +1,4 @@
-// import { useStore } from "../stores/ToDoListStore"
+// import { useTasksStore } from "../stores/tasksStore"
 import styled from "styled-components"
 
 export const ToDoCounter = () => {
@@ -14,20 +14,9 @@ export const ToDoCounter = () => {
   )
 }
 
-// export const CounterComponent = () => {
-//   const { count, increment } = useStore()
-
-//   return (
-//     <div>
-//       <p>Count: {count}</p>
-//       <button onClick={increment}>Increment</button>
-//     </div>
-//   )
-// }
-
 const StyledDiv = styled.div`
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 `
 
 const CounterContainer = styled.div`
@@ -37,7 +26,9 @@ const CounterContainer = styled.div`
 `
 
 const TaskBox = styled.div`
-  border: 2px solid #E3E3E3;
+  border: 2px solid ${({ theme }) => theme.colors.border};
+  border-radius: 5px;
   padding: 15px;
   width: 45%;
-  `
+  background-color: ${({ theme }) => theme.colors.cardBg};
+`

@@ -9,8 +9,8 @@ export const ToDoTasks = () => {
   // const isActive = useTasksStore((state) => state.isActive)
 
   const handleRemoveTask = (taskToRemove) => {
-    removeTask(taskToRemove);
-  };
+    removeTask(taskToRemove)
+  }
 
   const handleOnTaskChange = (checked, task) => {
     console.log('checked', checked)
@@ -34,7 +34,8 @@ export const ToDoTasks = () => {
                 />
                 {task.text}
               </StyledSpan>
-              <StyledButton onClick={() => handleRemoveTask(task)}>
+              <StyledButton
+                onClick={() => handleRemoveTask(task)}>
                 <img src="/trash-2.png" alt="Remove button" />
               </StyledButton>
             </StyledLi>

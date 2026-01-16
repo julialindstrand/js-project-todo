@@ -35,4 +35,3 @@ const TaskBox = styled.div`
   width: 45%;
   background-color: ${({ theme }) => theme.colors.cardBg};
 `
-

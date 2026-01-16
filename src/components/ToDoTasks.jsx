@@ -63,11 +63,20 @@ const StyledCheckbox = styled.input`
   height: 25px;
   margin-right: 10px;
   accent-color: ${({ theme }) => theme.colors.iconBlue};
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+
+  }
 `
 
 const StyledButton = styled.button`
   border: none;
   background-color: ${({ theme }) => theme.colors.cardBg};
+
+    &:hover {
+    cursor: pointer;}
 `
 
 const StyledSpan = styled.label`

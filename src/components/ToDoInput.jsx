@@ -3,11 +3,9 @@ import { useTasksStore } from '../stores/tasksStore'
 import styled from "styled-components"
 
 export const ToDoInput = () => {
-  // const tasks = useTasksStore((state) => state.tasks)
   const addTask = useTasksStore((state) => state.addTask)
   const [newTask, setNewTask] = useState({ text: "", done: false })
   const isValid = newTask.text.length >= 1
-
 
   const handleAddTask = (event) => {
     event.preventDefault()
@@ -37,7 +35,6 @@ export const ToDoInput = () => {
   )
 }
 
-
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: row;
@@ -61,4 +58,9 @@ const StyledButton = styled.button`
   border: none;
   padding-left: 3px;
   background-color: ${({ theme }) => theme.colors.cardBg};
-  `
+  
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+`

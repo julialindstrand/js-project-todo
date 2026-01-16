@@ -2,8 +2,8 @@ import { create } from "zustand"
 
 export const useTasksStore = create((set, get) => ({
     tasks: [
-        { id: 1, text: "Make this project", done: false },
-        { id: 2, text: "Have fun", done: false }
+        // { id: 1, text: "Make this project", done: false },
+        // { id: 2, text: "Have fun", done: false }
     ],
 
     addTask: (newTask) => {

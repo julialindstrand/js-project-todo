@@ -2,19 +2,17 @@ import { useTasksStore } from '../stores/tasksStore'
 import styled from "styled-components"
 import { LottieAnime } from './Lottie'
 
-
 export const ToDoTasks = () => {
   const tasks = useTasksStore((state) => state.tasks);
   const removeTask = useTasksStore((state) => state.removeTask)
-  // const isActive = useTasksStore((state) => state.isActive)
+  const toggleTask = useTasksStore((state) => state.toggleTask)
 
   const handleRemoveTask = (taskToRemove) => {
     removeTask(taskToRemove)
   }
 
-  const handleOnTaskChange = (checked, task) => {
-    console.log('checked', checked)
-    // modify with task store
+  const handleOnTaskChange = (_, task) => {
+    toggleTask(task);
   }
 
   return (
@@ -28,14 +26,15 @@ export const ToDoTasks = () => {
               <StyledSpan>
                 <StyledCheckbox
                   type="checkbox"
-                  // name={task.id}
-                  // checked={checkboxes[task.id].value}
-                  onChange={() => handleOnTaskChange(event.target.checked, task)}
+                  onChange={(e) => handleOnTaskChange(e.target.checked, task)}
+                  checked={task.done}
                 />
                 {task.text}
               </StyledSpan>
               <StyledButton
-                onClick={() => handleRemoveTask(task)}>
+                onClick={() => handleRemoveTask(task)}
+                aria-label="Remove button"
+              >
                 <img src="/trash-2.png" alt="Remove button" />
               </StyledButton>
             </StyledLi>

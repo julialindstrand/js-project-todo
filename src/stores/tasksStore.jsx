@@ -2,18 +2,16 @@ import { create } from "zustand"
 
 export const useTasksStore = create((set, get) => ({
     tasks: [
-        { id: 1, text: "Make this project" },
-        { id: 2, text: "Have fun" }
+        { id: 1, text: "Make this project", done: false },
+        { id: 2, text: "Have fun", done: false }
     ],
-
-    // isActive: true,
 
     addTask: (newTask) => {
         const taskListLength = get().tasks.length
 
         const taskToAdd = {
             ...newTask,
-            id: taskListLength + 1,
+            id: taskListLength + 1, done: false
         }
 
         return set((state) => ({
@@ -22,7 +20,6 @@ export const useTasksStore = create((set, get) => ({
     },
 
     removeTask: (taskToRemove) => {
-
 
         return set((state) => {
             const newTasks = state.tasks.filter((t) => t.id !== taskToRemove.id);
@@ -33,17 +30,11 @@ export const useTasksStore = create((set, get) => ({
         });
     },
 
-    // toggleTask: () => set{(state) => ({ isActive: !state.isActive })}
+    toggleTask: (taskToToggle) =>
 
-
-
-
-
-    //         set(state => ({ tasks: [...state.tasks, { text, completed: false, index: Date.now() }] })),
-    //             removeTask: (index) => set(state => {
-    //                 const newTasks = [...state.tasks]
-    //                 newTasks.splice(index, 1)
-    //             }),
-    //                 // return { tasks: newTasks }
-    //                 toggleTodo: (index) => set((state) => ({ tasks: state.tasks.map(t => t.index === index ? { ...t, completed: !t.completed } : t) })),
+        set((state) => ({
+            tasks: state.tasks.map((t) =>
+                t.id === taskToToggle.id ? { ...t, done: !t.done } : t
+            ),
+        })),
 }))

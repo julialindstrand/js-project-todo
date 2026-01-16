@@ -1,14 +1,17 @@
-// import { useTasksStore } from "../stores/tasksStore"
 import styled from "styled-components"
+import { useTasksStore } from "../stores/tasksStore"
 
-export const ToDoCounter = () => {
+export const CountTasks = () => {
+
+  const active = useTasksStore((s) => s.tasks.filter((t) => !t.done).length)
+  const done = useTasksStore((s) => s.tasks.filter((t) => t.done).length)
 
   return (
     <StyledDiv>
       <h2>Your tasks</h2>
       <CounterContainer>
-        <TaskBox><h3>Active: </h3></TaskBox>
-        <TaskBox><h3>Done: </h3></TaskBox>
+        <TaskBox><h3>Active: {active}</h3></TaskBox>
+        <TaskBox><h3>Done: {done}</h3></TaskBox>
       </CounterContainer>
     </StyledDiv>
   )
@@ -32,3 +35,4 @@ const TaskBox = styled.div`
   width: 45%;
   background-color: ${({ theme }) => theme.colors.cardBg};
 `
+

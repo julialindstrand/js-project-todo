@@ -2,6 +2,7 @@ import { Header } from "./components/Header"
 import { ToDoInput } from "./components/ToDoInput"
 import { CountTasks } from "./components/ToDoCounter"
 import { ToDoTasks } from "./components/ToDoTasks"
+import { Footer } from "./components/Footer"
 
 export const App = () => {
   return (
@@ -14,6 +15,8 @@ export const App = () => {
       <CountTasks />
 
       <ToDoTasks />
+
+      <Footer />
 
     </>
   )
